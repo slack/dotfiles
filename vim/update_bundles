@@ -13,6 +13,7 @@ git_bundles = [
   "git://github.com/msanders/snipmate.vim.git",
   "git://github.com/scrooloose/nerdcommenter.git",
   "git://github.com/scrooloose/nerdtree.git",
+  "git://github.com/vim-scripts/coq-syntax.git",
   "git://github.com/slack/vim-align.git",
   "git://github.com/slack/vim-bufexplorer.git",
   "git://github.com/slack/vim-fuzzyfinder.git",
