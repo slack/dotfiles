@@ -46,28 +46,33 @@ export LSOPTS="--color=auto -F"
 
 export DISTCC_HOSTS="moebius slack satyr.vegcrew.net orbit localhost"
 
-if [ `hostname` = 'subgenius' ]; then
-	#if [ -e "$HOME/.ssh/subgenius/identity" ]; then
-	#	export SSH_IDENTITY="$HOME/.ssh/subgenius/identity"
-	#else;
-		unset SSH_IDENTITY
-	#fi
+if [[ `hostname` = 'subgenius' ]]
+then
+  #if [ -e "$HOME/.ssh/subgenius/identity" ]; then
+  # export SSH_IDENTITY="$HOME/.ssh/subgenius/identity"
+  #else;
+    unset SSH_IDENTITY
+  #fi
 else;
-	if [ -a '$HOME/.xmission' ]; then
-		export SSH_IDENTITY="$HOME/.ssh/xmission/id_dsa"
-	else;
-		unset SSH_IDENTITY
-	fi
+  if [[ -a '$HOME/.xmission' ]]
+  then
+    export SSH_IDENTITY="$HOME/.ssh/xmission/id_dsa"
+  else;
+    unset SSH_IDENTITY
+  fi
 fi
 
-if [ -x /usr/bin/lesspipe ] ; then
-	export LESSOPEN="|/usr/bin/lesspipe %s"
+if [[ -x /usr/bin/lesspipe ]]
+then
+  export LESSOPEN="|/usr/bin/lesspipe %s"
 fi
 
-if [ "$OS" = "SunOS" ]; then
-	if [ "$TERM" = "xterm" ]; then
-        	export TERM=xtermc
-	fi
-	unset LESS
-	export LSOPTS="-F"
+if [[ "$OS" = "SunOS" ]]
+then
+  if [[ "$TERM" = "xterm" ]]
+  then
+          export TERM=xtermc
+  fi
+  unset LESS
+  export LSOPTS="-F"
 fi
