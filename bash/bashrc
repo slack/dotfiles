@@ -16,6 +16,10 @@ if [[ -d "$HOME/Developer" ]] ; then
     PATH="$HOME/Developer/sbin:$HOME/Developer/bin:$PATH"
 fi
 
+if [[ -d "$HOME/Developer/lib/node_modules" ]] ; then
+  NODE_PATH="$HOME/Developer/lib/node_modules"
+fi
+
 ## source cinderella bash completions
 if [[ -d "$HOME/Developer/etc/bash_completion.d" ]] ; then
     source $HOME/Developer/etc/bash_completion.d/*.bash
