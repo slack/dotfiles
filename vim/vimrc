@@ -18,6 +18,9 @@ set backspace=indent,eol,start
 let mapleader = ","
 set history=1000
 
+" Automatically reload files
+set autoread
+
 " searching stuff
 set hlsearch
 set incsearch
