@@ -63,6 +63,9 @@ alias gpu='git push'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gs='git status'
 
+alias metame='CLOUD_URL=https://cloud-meta.engineyard.com ey'
+alias m='CLOUD_URL=https://cloud-meta.engineyard.com ey ssh -e'
+
 ## Set ls options per platform
 if [[ $OSTYPE == 'linux-gnu' ]]; then
   alias ls='ls -p --color=auto'
