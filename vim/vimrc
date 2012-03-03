@@ -6,6 +6,8 @@ filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+set modelines=10
+
 " set the title in xterm
 set title
 
@@ -59,7 +61,7 @@ set cursorline
 
 " Trailling spaces and tabs
 set list
-set listchars=tab:>-,trail:*,nbsp:*
+set listchars=tab:>-,trail:·,nbsp:·
 
 set fileformat=unix
 set nobackup
