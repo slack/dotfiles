@@ -82,8 +82,8 @@ map <leader>a= :Align =<CR>
 " FuzzyFinder
 let g:fuzzy_ignore = "*.log"
 let g:fuzzy_matching_limit = 70
-map <leader>t :FufFile **/<CR>
-map <leader>b :FufBuffer<CR>
+"map <leader>t :FufFile **/<CR>
+"map <leader>b :FufBuffer<CR>
 
 " Set minimum window height
 set winheight=10
