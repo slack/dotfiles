@@ -26,6 +26,7 @@ set autoread
 " searching stuff
 set hlsearch
 set incsearch
+set showmatch
 
 " Make <C-L> clear highlight and redraw
 nnoremap <C-L> :nohls<CR><C-L>
@@ -37,7 +38,7 @@ set smartcase
 
 " <tab> completion for filenames
 set wildmenu
-set wildmode=list:longest
+set wildmode=list,longest
 set complete-=i
 
 " turn syntax highlighting on
@@ -67,7 +68,7 @@ set fileformat=unix
 set nobackup
 
 " Status Line
-set statusline=%F%m%r%h%w\ [f:%{&ff}\ t:%Y]\ [A:\%03.3b\ H:\%02.2B]\ [P:%04l,%04v][%p%%]\ [LEN=%L]\ %{fugitive#statusline()}
+set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)\ %{fugitive#statusline()}
 set laststatus=2
 
 " NT bindings
@@ -75,15 +76,20 @@ map <leader>n :NERDTreeToggle<CR>
 map <leader>ntm :NERDTreeMirror<CR>
 map <leader>ntc :NERDTreeClose<CR>
 
+" Ctrl-P
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_map = '<leader>f'
+map <leader>b :CtrlPBuffer
+map <leader>gv :CtrlP app/views<cr>
+map <leader>gc :CtrlP app/controllers<cr>
+map <leader>gm :CtrlP app/models<cr>
+map <leader>gl :CtrlP lib<cr>
+map <leader>gg :topleft 100 :split Gemfile<cr>
+map <leader>f :CtrlP<cr>
+
 " Align bindings
 " map <leader>a= to :Align = (rather than :Align := )
 map <leader>a= :Align =<CR>
-
-" FuzzyFinder
-let g:fuzzy_ignore = "*.log"
-let g:fuzzy_matching_limit = 70
-"map <leader>t :FufFile **/<CR>
-"map <leader>b :FufBuffer<CR>
 
 " Set minimum window height
 set winheight=10
