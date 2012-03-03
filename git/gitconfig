@@ -11,16 +11,16 @@
   co = checkout
   br = branch
   ls = branch
-  s  = status
+  s = status
   a = add
-  b  = branch
+  b = branch
   d = diff
   dc = diff --cached
   v = show
   l = log --decorate --oneline --graph
   ll = log
   cp = cherry-pick
-  c  = checkout
+  c = checkout
   cc = commit
   ri = rebase -i HEAD~10
   sh = !git-sh
@@ -33,4 +33,4 @@
 [apply]
   whitespace = fix
 [url "git@github.com:engineyard/"]
-       insteadOf = ey:
+  insteadOf = ey:
