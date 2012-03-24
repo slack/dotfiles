@@ -93,3 +93,5 @@ fi
 if [[ -s "$HOME/.rvm/bin/rvm-prompt" ]]; then
   export PS1="\$(~/.rvm/bin/rvm-prompt v g) $PS1"
 fi
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
