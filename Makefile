@@ -34,3 +34,4 @@ _ruby:
 _git:
 	ln -fs $(DOTFILES)/git/gitconfig ${HOME}/.gitconfig
 	ln -fs $(DOTFILES)/git/gitignore ${HOME}/.gitignore
+	ln -fs $(DOTFILES)/git/githelpers ${HOME}/.githelpers
