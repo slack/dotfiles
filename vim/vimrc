@@ -38,8 +38,9 @@ set smartcase
 
 " <tab> completion for filenames
 set wildmenu
-set wildmode=list,longest
+set wildmode=full
 set complete-=i
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 
 " turn syntax highlighting on
 syntax on
@@ -79,17 +80,19 @@ map <leader>ntc :NERDTreeClose<CR>
 " Ctrl-P
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_map = '<leader>f'
-map <leader>b :CtrlPBuffer
-map <leader>gv :CtrlP app/views<cr>
-map <leader>gc :CtrlP app/controllers<cr>
-map <leader>gm :CtrlP app/models<cr>
-map <leader>gl :CtrlP lib<cr>
-map <leader>gg :topleft 100 :split Gemfile<cr>
-map <leader>f :CtrlP<cr>
+map <leader>b :CtrlPBuffer<CR>
+map <leader>gv :CtrlP app/views<CR>
+map <leader>gc :CtrlP app/controllers<CR>
+map <leader>gm :CtrlP app/models<CR>
+map <leader>gl :CtrlP lib<CR>
+map <leader>gg :topleft 100 :split Gemfile<CR>
+map <leader>f :CtrlP<CR>
+map <leader>cf :ClearCtrlPCache<CR>
 
 " Align bindings
 " map <leader>a= to :Align = (rather than :Align := )
 map <leader>a= :Align =<CR>
+map <leader>ah :Align =><CR>
 
 " Set minimum window height
 set winheight=10
