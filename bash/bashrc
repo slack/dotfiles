@@ -39,6 +39,7 @@ alias nerd='vim +NERDTree'
 alias sr='screen -r'
 alias g='git'
 alias v='vagrant'
+alias vms='VBoxManage list runningvms'
 
 ## Bundler
 alias b='bundle'
@@ -72,7 +73,7 @@ alias m='CLOUD_URL=https://cloud-meta.engineyard.com ey ssh -e'
 ## Set ls options per platform
 if [[ $OSTYPE == 'linux-gnu' ]]; then
   alias ls='ls -p --color=auto'
-elif [[ $OSTYPE == 'darwin10.0' ]]; then
+elif [[ $OSTYPE == 'darwin11' ]]; then
   alias ls='ls -Gp'
 fi
 
