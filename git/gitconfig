@@ -28,3 +28,5 @@
   whitespace = fix
 [url "git@github.com:engineyard/"]
   insteadOf = ey:
+[branch]
+	autosetupmerge = true

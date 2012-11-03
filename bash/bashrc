@@ -3,6 +3,9 @@
 ## RVM
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; fi
 
+## rbenv
+#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
 ## set PATH so it includes user's private bin if it exists
 if [[ -d "$HOME/bin" ]] ; then
     PATH="$HOME/bin:$PATH"
@@ -91,6 +94,7 @@ if [[ -n "${SSH_CONNECTION+x}" ]]; then
 else
   export PS1="\W \$(parse_git_branch)\$ "
 fi
+
 if [[ -s "$HOME/.rvm/bin/rvm-prompt" ]]; then
   export PS1="\$(~/.rvm/bin/rvm-prompt v g) $PS1"
 fi
