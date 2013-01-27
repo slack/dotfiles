@@ -1,0 +1,2 @@
+export CFLAGS="-march=nocona -O2 -pipe"
+export CXXFLAGS="${CFLAGS}"
