@@ -29,4 +29,6 @@
 [url "git@github.com:engineyard/"]
   insteadOf = ey:
 [branch]
-	autosetupmerge = true
+  autosetupmerge = true
+[push]
+  default = tracking
