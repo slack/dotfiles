@@ -3,9 +3,6 @@
 ## RVM
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; fi
 
-## rbenv
-#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
 ## set PATH so it includes user's private bin if it exists
 if [[ -d "$HOME/bin" ]] ; then
     PATH="$HOME/bin:$PATH"
@@ -33,45 +30,6 @@ export EDITOR=vim
 
 ## PATH
 PATH=/usr/local/bin:$PATH
-
-## Aliases
-alias eytools='rvm use 1.8.7@ey'
-
-alias lft='lft -TeA'
-alias nerd='vim +NERDTree'
-alias sr='screen -r'
-alias g='git'
-alias v='vagrant'
-alias vms='VBoxManage list runningvms'
-
-## Bundler
-alias b='bundle'
-alias be='bundle exec'
-alias bi='bundle install'
-alias ber='bundle exec rake'
-alias sporkit='RELOADS=true bundle exec spork'
-alias ss='bundle exec spec -X -cfs'
-alias s='bundle exec spec -cfs'
-
-## Rails
-alias r='rails'
-
-## git
-alias gap='git add -p'
-alias gb='git branch'
-alias gc='git commit'
-alias gca='git commit -a'
-alias gco='git checkout'
-alias gd='git diff'
-alias gdc='git diff --cached'
-alias gl='git l'
-alias gpl='git pull'
-alias gpu='git push'
-alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
-alias gs='git status'
-
-alias metame='CLOUD_URL=https://cloud-meta.engineyard.com ey'
-alias m='CLOUD_URL=https://cloud-meta.engineyard.com ey ssh -e'
 
 ## Set ls options per platform
 if [[ $OSTYPE == 'linux-gnu' ]]; then
@@ -103,3 +61,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export RUBY_GC_MALLOC_LIMIT=60000000
 export RUBY_FREE_MIN=200000
+
+if [[ -s "$HOME/.aliases" ]]; then
+  source "$HOME/.aliases"
+fi
