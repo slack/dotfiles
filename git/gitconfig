@@ -32,3 +32,5 @@
   autosetupmerge = true
 [push]
   default = tracking
+[pull]
+	rebase = true
