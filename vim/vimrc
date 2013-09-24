@@ -89,6 +89,8 @@ map <leader>gg :topleft 100 :split Gemfile<CR>
 map <leader>f :CtrlP<CR>
 map <leader>cf :ClearCtrlPCache<CR>
 
+map <leader>o :cd ~/p/
+
 " Align bindings
 " map <leader>a= to :Align = (rather than :Align := )
 map <leader>a= :Align =<CR>
@@ -117,3 +119,11 @@ set grepformat=%f:%l:%m
 " backup files
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
+
+" ruby
+map <leader>rs :!ruby -c %:p<CR>
+map <leader>r19 :s/\v:([0-9a-z_]+)\s+\=\>\s+/\1: /g<CR>
+map <leader>r18 :s/\v([0-9a-z_"']+):\s+(.*)/:\1 => \2/g<CR>
+
+" Save files when vim loses focus
+au FocusLost * :wa

@@ -29,6 +29,7 @@ alias gco='git checkout'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias gl='git l'
+alias glp='git log -p'
 alias gpl='git pull'
 alias gpu='git push'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
