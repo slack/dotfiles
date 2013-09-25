@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
-# Modified by me from Tammer Saleh: http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen
+
+require 'fileutils'
 
 git_bundles = [
   "git://github.com/altercation/vim-colors-solarized.git",
@@ -19,20 +20,29 @@ git_bundles = [
   "git://github.com/vim-ruby/vim-ruby.git"
 ]
 
-require 'fileutils'
-require 'open-uri'
-
-bundles_dir = File.join(File.dirname(__FILE__), "bundle")
+bundles_dir       = File.join(File.dirname(__FILE__), "bundle")
+installed_bundles = []
 
 FileUtils.cd(bundles_dir)
-
 git_bundles.each do |url|
   dir = url.split('/').last.sub(/\.git$/, '')
+  installed_bundles << dir
+
   if Dir.exists?(dir)
     puts "Updating #{url} in #{dir}"
     %x{ set -x; pushd #{dir}; git fetch && git pull --rebase origin master; popd }
   else
     puts "  Unpacking #{url} into #{dir}"
-    `git clone #{url} #{dir}`
+    %x{ git clone #{url} #{dir} }
   end
+end
+
+# clean up orphaned directories
+Dir.glob('*').each do |dir|
+  next if dir =~ /^\./
+  next if installed_bundles.include?(dir)
+
+  puts "Pruning #{dir}"
+  FileUtils.rm_r dir, force: true
+  FileUtils.rmdir dir
 end
