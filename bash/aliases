@@ -9,15 +9,10 @@ alias v='vagrant'
 alias vms='VBoxManage list runningvms'
 
 ## Bundler
-alias b='bundle'
-alias be='bundle exec'
-alias bi='bundle install'
-alias ber='bundle exec rake'
-alias sporkit='RELOADS=true bundle exec spork'
-alias ss='bundle exec spec -X -cfs'
-alias s='bundle exec spec -cfs'
-
-## Rails
+alias b='bundle-hack'
+alias be='bundle-exec-hack'
+alias bl='bundle install --local'
+alias g='be guard'
 alias r='rails'
 
 ## git
