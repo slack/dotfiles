@@ -12,10 +12,10 @@ alias vms='VBoxManage list runningvms'
 alias b='bundle-hack'
 alias be='bundle-exec-hack'
 alias bl='bundle install --local'
-alias g='be guard'
 alias r='rails'
 
 ## git
+alias g='git'
 alias gap='git add -p'
 alias gb='git branch'
 alias gc='git commit'
