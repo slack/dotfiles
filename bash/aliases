@@ -35,3 +35,5 @@ alias m='CLOUD_URL=https://cloud-meta.engineyard.com ey ssh -e'
 alias tfl='tail -Fn30 log/*.log'
 
 alias a='azure'
+
+alias wtf='echo "❨╯°□°❩╯︵┻━┻"'
