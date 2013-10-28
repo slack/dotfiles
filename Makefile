@@ -7,11 +7,9 @@ shell:
 	ln -fs $(DOTFILES)/bash/bash_profile ${HOME}/.profile
 	ln -fs $(DOTFILES)/bash/bash_profile ${HOME}/.bash_profile
 	ln -fs $(DOTFILES)/bash/aliases ${HOME}/.aliases
-	ln -fs $(DOTFILES)/bash/homebrew_profile ${HOME}/.homebrew.profile
 	ln -fs $(DOTFILES)/zsh/zshrc ${HOME}/.zshrc
 	ln -fs $(DOTFILES)/zsh/zlogout ${HOME}/.zlogout
 	ln -fs $(DOTFILES)/zsh/zshenv ${HOME}/.zshenv
-	ln -fs $(DOTFILES)/friends ${HOME}/.friends
 	#ln -fs $(DOTFILES)/rc/gpg.conf ${HOME}/.gnupg/gpg.conf
 	ln -fs $(DOTFILES)/ack/ackrc ${HOME}/.ackrc
 screen:

@@ -7,11 +7,3 @@ if [ -n "$BASH_VERSION" ]; then
         . "$HOME/.bashrc"
     fi
 fi
-
-if [ -d "$HOME/.cinderalla" ]; then
-  source $HOME/.cinderella.profile
-fi
-
-if [ -f "$HOME/.homebrew.profile" ]; then
-  source $HOME/.homebrew.profile
-fi
