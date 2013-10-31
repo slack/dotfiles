@@ -6,8 +6,9 @@ if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
 fi
 
 ## Chruby
-if [[ -e "/usr/local/opt/chruby/share/chruby/chruby.sh" ]] ; then
-  source /usr/local/opt/chruby/share/chruby/chruby.sh
+if [[ -d "/usr/local/share/chruby" ]] ; then
+  source /usr/local/share/chruby/chruby.sh
+  source /usr/local/share/chruby/auto.sh
 fi
 
 ## set PATH so it includes user's private bin if it exists

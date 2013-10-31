@@ -7,3 +7,6 @@ if [ -n "$BASH_VERSION" ]; then
         . "$HOME/.bashrc"
     fi
 fi
+
+# default ruby plz
+chruby ruby-1.9
