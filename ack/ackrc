@@ -2,10 +2,10 @@
 --follow
 --group
 --ignore-dir=coverage
---ignore-dirs=bundle
---ignore-dirs=gems
---ignore-dirs=log
---ignore-dirs=tmp
+--ignore-dir=bundle
+--ignore-dir=gems
+--ignore-dir=log
+--ignore-dir=tmp
 --sort-files
 --type-add=css=.rake
 --type-add=css=.sass
