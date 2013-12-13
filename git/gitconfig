@@ -30,9 +30,9 @@
 [url "git@github.com:engineyard-cookbooks/"]
   insteadOf = eyc:
 [branch]
-  autosetupmerge = true
+	autosetuprebase = always
 [push]
-  default = tracking
+	default = tracking
 [pull]
 	rebase = true
 [web]
