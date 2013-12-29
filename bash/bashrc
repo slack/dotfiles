@@ -88,3 +88,7 @@ export RUBY_FREE_MIN=200000
 if [[ -s "$HOME/.aliases" ]]; then
   source "$HOME/.aliases"
 fi
+
+if [[ -d "$HOME/.env.d" ]] ; then
+    source $HOME/.env.d/*.bash
+fi
