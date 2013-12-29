@@ -37,6 +37,17 @@ if [[ -d "/usr/local/etc/bash_completion.d" ]] ; then
     source /usr/local/etc/bash_completion.d/*.bash
 fi
 
+# Java
+if [[ -e "/usr/libexec/java_home" ]] ; then
+  export JAVA_HOME=$(/usr/libexec/java_home)
+  export PATH=$JAVA_HOME:$PATH
+fi
+
+if [[ -d "$HOME/p/grails-2.3.4" ]] ; then
+  export GRAILS_HOME=/Users/jhansen/p/grails-2.3.4
+  export PATH="$PATH:$GRAILS_HOME/bin"
+fi
+
 ## Editor
 export EDITOR=vim
 
