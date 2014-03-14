@@ -80,15 +80,15 @@ map <leader>ntc :NERDTreeClose<CR>
 " Ctrl-P
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_map = '<leader>f'
-map <leader>b :CtrlPBuffer<CR>
-map <leader>gv :CtrlP app/views<CR>
-map <leader>gc :CtrlP app/controllers<CR>
-map <leader>gm :CtrlP app/models<CR>
-map <leader>gl :CtrlP lib<CR>
-map <leader>gg :topleft 100 :split Gemfile<CR>
+map <leader>fb :CtrlPBuffer<CR>
+map <leader>fc :CtrlP app/controllers<CR>
+map <leader>fl :CtrlP lib<CR>
+map <leader>fm :CtrlP app/models<CR>
+map <leader>fv :CtrlP app/views<CR>
 map <leader>f :CtrlP<CR>
 map <leader>cf :ClearCtrlPCache<CR>
 
+map <leader>gg :topleft 100 :split Gemfile<CR>
 map <leader>o :cd ~/p/
 
 " Align bindings
