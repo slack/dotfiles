@@ -77,6 +77,9 @@ map <leader>n :NERDTreeToggle<CR>
 map <leader>ntm :NERDTreeMirror<CR>
 map <leader>ntc :NERDTreeClose<CR>
 
+" BufExplorer
+let g:bufExplorerFindActive=0
+
 " Ctrl-P
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_map = '<leader>f'
