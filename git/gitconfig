@@ -29,6 +29,8 @@
   insteadOf = ey:
 [url "git@github.com:engineyard-cookbooks/"]
   insteadOf = eyc:
+[url "git@github.com:slack/"]
+  insteadOf = slack:
 [branch]
 	autosetuprebase = always
 [push]
