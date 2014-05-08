@@ -11,6 +11,8 @@ if [[ -d "$HOME/bin" ]] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.13.0/libexec"
+
 if [[ -d "$HOME/.files/bin" ]] ; then
     PATH="$HOME/.files/bin:$PATH"
 fi
@@ -79,5 +81,7 @@ if [[ -s "$HOME/.aliases" ]]; then
 fi
 
 if [[ -d "$HOME/.env.d" ]] ; then
-    source $HOME/.env.d/*.bash
+  for f in $HOME/.env.d/*.bash; do
+    source $f
+  done
 fi

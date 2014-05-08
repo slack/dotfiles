@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [[ -z ${EC2_CREDS_ROOT} ]]; then
+  echo "EC2_CREDS_ROOT not set"
+  exit 1
+fi
+
+if [[ $1 == "ls" || -z $1 ]]; then
+  echo "Log in with 'ec2-login <user>'"
+  ls -1 ${EC2_CREDS_ROOT}
+  exit
+fi
+
+if [[ -e "${EC2_CREDS_ROOT}/$1" ]]; then
+  source ${EC2_CREDS_ROOT}/$1
+  echo "Logged in as '$1'"
+else
+  echo "No credentials found for $1"
+fi
+
+echo "EC2_URL: ${EC2_URL}"
