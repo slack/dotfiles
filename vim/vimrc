@@ -97,8 +97,8 @@ map <leader>gg :topleft 100 :split Gemfile<CR>
 map <leader>o :cd ~/p/
 
 " Align bindings
-" :AlignMapsClean removes default maps
-map <leader>a= :Align =<CR>
+" Note: :AlignMapsClean removes default maps
+" map <leader>a= :Align =<CR>
 map <leader>ah :Align =><CR>
 
 " Set minimum window height
