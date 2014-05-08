@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if [[ -z ${CORE_CREDS_ROOT} ]]; then
+  echo "CORE_CREDS_ROOT not set!"
+  exit 1
+fi
+
+if [[ $1 == "ls" || -z $1 ]]; then
+  echo "Log in with '. core-login <account>' use 'core-login ls' to list."
+  ls -1 ${CORE_CREDS_ROOT}
+  exit
+fi
+
+if [[ -e "${CORE_CREDS_ROOT}/$1" ]]; then
+  source ${CORE_CREDS_ROOT}/$1
+  echo "Logged in as '$1'"
+  echo "CORE_URL=${CORE_URL}"
+else
+  echo "No credentials found for $1"
+fi

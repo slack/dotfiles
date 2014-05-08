@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [[ -z ${CORE_TOKEN} ]]; then
+  echo "No CORE_TOKEN found, use 'core-login' to login"
+  exit 1
+fi
+
+if [[ -z ${CORE_URL} ]]; then
+  echo "No CORE_URL found, use 'core-login' to set"
+  exit 1
+fi
+
+response_body=$(curl -sv -H "X-EY-Token: ${CORE_TOKEN}" -H "Content-type: application/json" -H "Accept: application/json" ${CORE_URL}$*)
+
+echo ${response_body} | /usr/bin/env python -mjson.tool
