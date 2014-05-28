@@ -92,13 +92,14 @@ map <leader>fv :CtrlP app/views<CR>
 map <leader>fs :CtrlP spec<CR>
 map <leader>ff :CtrlP<CR>
 map <leader>cf :ClearCtrlPCache<CR>
+map <leader>ct :CtrlPTag<CR>
 
 map <leader>gg :topleft 100 :split Gemfile<CR>
 map <leader>o :cd ~/p/
 
 " Align bindings
 " Note: :AlignMapsClean removes default maps
-" map <leader>a= :Align =<CR>
+map <leader>a= :Align =<CR>
 map <leader>ah :Align =><CR>
 
 " Set minimum window height
