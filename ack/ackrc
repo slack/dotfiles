@@ -15,3 +15,5 @@
 --type-add=ruby=.ru
 --type-add=ruby=Rakefile
 --type-set=cucumber=.feature
+--ignore-file=is:tags
+--ignore-file=is:gems.dump
