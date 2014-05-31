@@ -6,19 +6,23 @@
   status = auto
   branch = auto
 [alias]
-  st = status
-  ci = commit
-  co = checkout
-  br = branch
-  ls = branch
-  s = status
   a = add
+  ap = add -p
   b = branch
+  br = branch
+  ca = commit --amend
+  cah = commit --amend -CHEAD
+  ci = commit
+  cm = commit -m
+  co = checkout
   d = diff
   dc = diff --cached
   info = "!source ~/.githelpers && pretty_git_log"
   l = !git info -30
   lp = log --decorate --oneline --graph -p
+  ls = branch
+  s = status
+  st = status
 [core]
   editor = /usr/bin/vim
   excludesfile = ~/.gitignore

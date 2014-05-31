@@ -14,20 +14,6 @@ alias r='rails'
 
 ## git
 alias g='git'
-alias gap='git add -p'
-alias gb='git branch'
-alias gc='git commit'
-alias gca='git commit --amend'
-alias gcah='git commit --amend -CHEAD'
-alias gco='git checkout'
-alias gd='git diff'
-alias gdc='git diff --cached'
-alias gl='git l'
-alias glp='git log -p'
-alias gpl='git pull'
-alias gpu='git push'
-alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
-alias gs='git status'
 
 alias metame='CLOUD_URL=https://cloud-meta.engineyard.com ey'
 alias m='CLOUD_URL=https://cloud-meta.engineyard.com ey ssh -e'
