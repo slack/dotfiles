@@ -36,6 +36,7 @@ alias tfl='tail -Fn30 log/*.log'
 alias pr='hub pull-request -b engineyard:master -h engineyard:$(git symbolic-ref --short -q HEAD)'
 
 alias a='azure'
+alias d='docker'
 
 alias wtf='echo "❨╯°□°❩╯︵┻━┻"'
 alias idk='echo "¯\_(ツ)_/¯"'
