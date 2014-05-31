@@ -1,40 +1,40 @@
 [user]
-  name = Jason Hansen
-  email = jason@slack.io
+	name = Jason Hansen
+	email = jason@slack.io
 [color]
-  diff = auto
-  status = auto
-  branch = auto
+	diff = auto
+	status = auto
+	branch = auto
 [alias]
-  a = add
-  ap = add -p
-  b = branch
-  br = branch
-  ca = commit --amend
-  cah = commit --amend -CHEAD
-  ci = commit
-  cm = commit -m
-  co = checkout
-  d = diff
-  dc = diff --cached
-  info = "!source ~/.githelpers && pretty_git_log"
-  l = !git info -30
-  lp = log --decorate --oneline --graph -p
-  ls = branch
-  s = status
-  st = status
+	a = add
+	ap = add -p
+	b = branch
+	br = branch
+	ca = commit --amend
+	cah = commit --amend -CHEAD
+	ci = commit
+	cm = commit -m
+	co = checkout
+	d = diff
+	dc = diff --cached
+	info = "!source ~/.githelpers && pretty_git_log"
+	l = !git info -30
+	lp = log --decorate --oneline --graph -p
+	ls = branch
+	s = status
+	st = status
 [core]
-  editor = /usr/bin/vim
-  excludesfile = ~/.gitignore
-  whitespace = trailing-space,space-before-tab
+	editor = /usr/bin/vim
+	excludesfile = ~/.gitignore
+	whitespace = trailing-space,space-before-tab
 [apply]
-  whitespace = fix
+	whitespace = fix
 [url "git@github.com:engineyard/"]
-  insteadOf = ey:
+	insteadOf = ey:
 [url "git@github.com:engineyard-cookbooks/"]
-  insteadOf = eyc:
+	insteadOf = eyc:
 [url "git@github.com:slack/"]
-  insteadOf = slack:
+	insteadOf = slack:
 [branch]
 	autosetuprebase = always
 [push]
