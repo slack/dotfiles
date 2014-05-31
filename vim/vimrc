@@ -55,12 +55,12 @@ set vb t_vb=
 
 filetype plugin indent on
 set ruler
-set tabstop=2
 set smarttab
-set shiftwidth=2
-set autoindent
-set expandtab
 set cursorline
+
+autocmd FileType *    set tabstop=8|set shiftwidth=8|set noexpandtab|set autoindent
+autocmd FileType ruby set tabstop=2|set shiftwidth=2|set expandtab|set autoindent
+autocmd FileType go   set nolist|set tabstop=8|set shiftwidth=8|set noexpandtab
 
 " Trailling spaces and tabs
 set list
