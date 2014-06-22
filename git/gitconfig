@@ -15,12 +15,14 @@
 	ci = commit
 	cm = commit -m
 	co = checkout
+	cv = commit -v
 	d = diff
 	dc = diff --cached
 	info = "!source ~/.githelpers && pretty_git_log"
 	l = !git info -30
 	lp = log --decorate --oneline --graph -p
 	ls = branch
+	pl = pull --rebase
 	s = status
 	st = status
 [core]
