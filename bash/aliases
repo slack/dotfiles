@@ -26,3 +26,5 @@ alias d='docker'
 
 alias wtf='echo "❨╯°□°❩╯︵┻━┻"'
 alias idk='echo "¯\_(ツ)_/¯"'
+
+alias reado="ssh-reagent $*"
