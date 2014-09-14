@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cat | awk 'RT{sub("%","0x",RT);RT=sprintf("%c",strtonum(RT))}$0=$0RT' RS=%.. ORS=
