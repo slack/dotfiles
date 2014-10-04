@@ -73,10 +73,11 @@ set nobackup
 set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)\ %{fugitive#statusline()}
 set laststatus=2
 
-" NT bindings
-map <leader>n :NERDTreeToggle<CR>
+" NERDTree
+map <leader>nt :NERDTreeToggle<CR>
+map <leader>nf :NERDTreeFind<CR>
 map <leader>ntm :NERDTreeMirror<CR>
-map <leader>ntc :NERDTreeClose<CR>
+let NERDTreeAutoDeleteBuffer=1
 
 " BufExplorer
 let g:bufExplorerFindActive=0
