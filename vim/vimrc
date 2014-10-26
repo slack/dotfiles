@@ -74,8 +74,8 @@ set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)\ %{fugitive#statusl
 set laststatus=2
 
 " NERDTree
-map <leader>nt :NERDTreeToggle<CR>
-map <leader>nf :NERDTreeFind<CR>
+map <leader>ntt :NERDTreeToggle<CR>
+map <leader>ntf :NERDTreeFind<CR>
 map <leader>ntm :NERDTreeMirror<CR>
 let NERDTreeAutoDeleteBuffer=1
 
