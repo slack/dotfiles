@@ -4,6 +4,9 @@ case "$1" in
   eu-west-1)
     export EC2_URL=ec2.eu-west-1.amazonaws.com
     ;;
+  eu-central-1)
+    export EC2_URL=ec2.eu-central-1.amazonaws.com
+    ;;
   sa-east-1)
     export EC2_URL=ec2.sa-east-1.amazonaws.com
     ;;
