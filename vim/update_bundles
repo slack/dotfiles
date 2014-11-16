@@ -11,6 +11,7 @@ git_bundles = [
   "git://github.com/mileszs/ack.vim.git",
   "git://github.com/nelstrom/vim-textobj-rubyblock.git",
   "git://github.com/scrooloose/nerdtree.git",
+  "git://github.com/scrooloose/syntastic.git",
   "git://github.com/slack/vim-align.git",
   "git://github.com/tpope/vim-bundler.git",
   "git://github.com/tpope/vim-commentary.git",
