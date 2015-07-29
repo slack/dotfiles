@@ -12,6 +12,10 @@ if [[ -d "$HOME/bin" ]] ; then
 fi
 
 export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.7.1.0/libexec"
+export AWS_ELASTICACHE_HOME="/usr/local/Cellar/aws-elasticache/1.9.000/libexec"
+export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.14.001/libexec"
+export AWS_CREDENTIAL_FILE="/Volumes/AWSAccounts/credentials/me-rds"
+complete -C aws_completer aws
 
 if [[ -d "$HOME/.files/bin" ]] ; then
     PATH="$HOME/.files/bin:$PATH"
@@ -40,9 +44,9 @@ if [[ -e "/usr/libexec/java_home" ]] ; then
   export PATH=$JAVA_HOME:$PATH
 fi
 
-if [[ -d "$HOME/p/grails-2.3.4" ]] ; then
-  export GRAILS_HOME=/Users/jhansen/p/grails-2.3.4
-  export PATH="$PATH:$GRAILS_HOME/bin"
+if [[ -d "$HOME/p/go" ]]; then
+  export GOPATH="$HOME/p/go"
+  export PATH=$GOPATH/bin:$PATH
 fi
 
 ## Editor
@@ -86,3 +90,5 @@ if [[ -d "$HOME/.env.d" ]] ; then
     source $f
   done
 fi
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

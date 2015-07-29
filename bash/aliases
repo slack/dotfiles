@@ -17,7 +17,7 @@ alias g='git'
 
 alias metame='CLOUD_URL=https://cloud-meta.engineyard.com ey'
 alias m='CLOUD_URL=https://cloud-meta.engineyard.com ey ssh -e'
-alias tfl='tail -Fn30 log/*.log'
+alias tfl='tail -n 30 -qF log/*.events.log log/*.actionview.log log/{test,development}.log log/*.controller.log | egrep -v "(Datamapper bug|Cache read)"'
 
 alias pr='hub pull-request -b engineyard:master -h engineyard:$(git symbolic-ref --short -q HEAD)'
 

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 if [[ -z ${CORE_TOKEN} ]]; then
   echo "No CORE_TOKEN found, use 'core-login' to login"
   exit 1
@@ -10,6 +12,6 @@ if [[ -z ${CORE_URL} ]]; then
   exit 1
 fi
 
-response_body=$(curl -sv -H "X-EY-Token: ${CORE_TOKEN}" -H "Content-type: application/json" -H "Accept: application/vnd.engineyard-private+json" ${CORE_URL}$*)
+response_body=$(curl -v -X ${CORE_METHOD:-"GET"} -H "X-EY-Token: ${CORE_TOKEN}" -H "Content-type: application/json" -H "Accept: application/vnd.engineyard-private+json" ${CORE_URL}$*)
 
 echo ${response_body} | /usr/bin/env python -mjson.tool
