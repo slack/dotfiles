@@ -9,4 +9,10 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # default ruby plz
-chruby ruby-2.1
+chruby ruby-2.2
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/jhansen/google/google-cloud-sdk/path.bash.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/jhansen/google/google-cloud-sdk/completion.bash.inc'

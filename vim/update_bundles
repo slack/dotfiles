@@ -5,6 +5,7 @@ require 'fileutils'
 git_bundles = [
   "git://github.com/altercation/vim-colors-solarized.git",
   "git://github.com/avakhov/vim-yaml.git",
+  "git://github.com/elixir-lang/vim-elixir.git",
   "git://github.com/fatih/vim-go.git",
   "git://github.com/jlanzarotta/bufexplorer.git",
   "git://github.com/kana/vim-textobj-user.git",
@@ -20,6 +21,7 @@ git_bundles = [
   "git://github.com/tpope/vim-markdown.git",
   "git://github.com/tpope/vim-rails.git",
   "git://github.com/tpope/vim-surround.git",
+  "git://github.com/markcornick/vim-terraform.git",
   "git://github.com/vim-ruby/vim-ruby.git",
   "git://github.com/vim-scripts/matchit.zip.git",
 ]
