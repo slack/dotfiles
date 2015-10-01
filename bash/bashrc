@@ -90,5 +90,6 @@ if [[ -d "$HOME/.env.d" ]] ; then
     source $f
   done
 fi
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
