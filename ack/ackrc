@@ -6,6 +6,7 @@
 --ignore-dir=gems
 --ignore-dir=log
 --ignore-dir=tmp
+--ignore-dir=vendor
 --sort-files
 --type-add=css=.rake
 --type-add=css=.sass

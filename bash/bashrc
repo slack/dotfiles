@@ -47,6 +47,7 @@ fi
 if [[ -d "$HOME/p/go" ]]; then
   export GOPATH="$HOME/p/go"
   export PATH=$GOPATH/bin:$PATH
+  export GO15VENDOREXPERIMENT=1
 fi
 
 ## Editor
