@@ -36,10 +36,10 @@ git_bundles.each do |url|
 
   if Dir.exists?(dir)
     puts "Updating #{url} in #{dir}"
-    %x{ set -x; pushd #{dir}; git fetch && git pull --rebase origin master; popd }
+    %x{ bash -c 'set -x; pushd #{dir}; git fetch && git pull --rebase origin master; popd' }
   else
     puts "  Unpacking #{url} into #{dir}"
-    %x{ git clone #{url} #{dir} }
+    %x{ bash -c 'git clone #{url} #{dir}' }
   end
 end
 
