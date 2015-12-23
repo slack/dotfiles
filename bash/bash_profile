@@ -12,7 +12,7 @@ fi
 chruby ruby-2.2
 
 # The next line updates PATH for the Google Cloud SDK.
-if [[ -e "$HOME/google/google-cloudsdk" ]]; then
+if [[ -e "$HOME/google/google-cloud-sdk" ]]; then
     source "${HOME}/google/google-cloud-sdk/path.bash.inc"
     source "${HOME}/google/google-cloud-sdk/completion.bash.inc"
 fi
