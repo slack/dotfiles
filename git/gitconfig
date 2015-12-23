@@ -1,6 +1,3 @@
-[user]
-	name = Jason Hansen
-	email = jason@slack.io
 [color]
 	diff = auto
 	status = auto
@@ -32,12 +29,6 @@
 	whitespace = trailing-space,space-before-tab
 [apply]
 	whitespace = fix
-[url "git@github.com:engineyard/"]
-	insteadOf = ey:
-[url "git@github.com:engineyard-cookbooks/"]
-	insteadOf = eyc:
-[url "git@github.com:slack/"]
-	insteadOf = slack:
 [branch]
 	autosetuprebase = always
 [push]
@@ -46,3 +37,5 @@
 	rebase = true
 [web]
 	browser = open
+[user]
+	name = Jason Hansen
