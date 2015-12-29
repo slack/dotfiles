@@ -22,7 +22,6 @@ alias tfl='tail -n 30 -qF log/*.events.log log/*.actionview.log log/{test,develo
 alias pr='hub pull-request -b engineyard:master -h engineyard:$(git symbolic-ref --short -q HEAD)'
 
 alias a='azure'
-alias d='docker'
 
 alias wtf='echo "❨╯°□°❩╯︵┻━┻"'
 alias idk='echo "¯\_(ツ)_/¯"'
