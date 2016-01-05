@@ -1,19 +1,19 @@
-#!/bin/sh
+#!/bin/bash
 
-echo "\nDeis =========================="
-echo "DEIS_REGISTRY=${DEIS_REGISTRY}"
-echo "IMAGE_PREFIX=${IMAGE_PREFIX}"
-echo "DEIS_PROFILE=${DEIS_PROFILE}"
+echo -e "\nDeis =========================="
+echo -e "DEIS_REGISTRY=${DEIS_REGISTRY}"
+echo -e "IMAGE_PREFIX=${IMAGE_PREFIX}"
+echo -e "DEIS_PROFILE=${DEIS_PROFILE}"
 
-echo "\nDocker ========================"
-echo "DOCKER_CERT_PATH=${DOCKER_CERT_PATH}"
-echo "DOCKER_HOST=${DOCKER_HOST}"
-echo "DOCKER_MACHINE_NAME=${DOCKER_MACHINE_NAME}"
-echo "DOCKER_TLS_VERIFY=${DOCKER_TLS_VERIFY}"
+echo -e "\nDocker ========================"
+echo -e "DOCKER_CERT_PATH=${DOCKER_CERT_PATH}"
+echo -e "DOCKER_HOST=${DOCKER_HOST}"
+echo -e "DOCKER_MACHINE_NAME=${DOCKER_MACHINE_NAME}"
+echo -e "DOCKER_TLS_VERIFY=${DOCKER_TLS_VERIFY}"
 
-echo "\nKubernetes ===================="
-echo "KUBECONFIG=${KUBE_CONFIG}"
+echo -e "\nKubernetes ===================="
+echo -e "KUBECONFIG=${KUBE_CONFIG}"
 
-echo "\nGo ============================"
-echo "GOPATH=${GOPATH}"
-echo "GO15VENDOREXPERIMENT=${GO15VENDOREXPERIMENT}"
+echo -e "\nGo ============================"
+echo -e "GOPATH=${GOPATH}"
+echo -e "GO15VENDOREXPERIMENT=${GO15VENDOREXPERIMENT}"
