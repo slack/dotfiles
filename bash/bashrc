@@ -71,11 +71,17 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
 
+function kube_target {
+  if [[ ! -z ${KUBE_TARGET} ]]; then
+    echo -n "k:${KUBE_TARGET} "
+  fi
+}
+
 ## Prompt
 if [[ -n "${SSH_CONNECTION+x}" ]]; then
-  export PS1="\H:\W \$(parse_git_branch)\$ "
+  export PS1="\$(kube_target)\H:\W \$(parse_git_branch)\$ "
 else
-  export PS1="\W \$(parse_git_branch)\$ "
+  export PS1="\$(kube_target)\W \$(parse_git_branch)\$ "
 fi
 
 export RUBY_FREE_MIN=200000

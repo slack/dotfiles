@@ -5,6 +5,7 @@ KUBES=~/.kubes
 case "$1" in
         clear)
                 unset KUBECONFIG
+		unset KUBE_TARGET
                 ;;
         info)
                 echo "KUBECONFIG=${KUBECONFIG}"
