@@ -15,7 +15,7 @@
 	cv = commit -v
 	d = diff
 	dc = diff --cached
-	fa = fetch --all --tags
+	fa = fetch --all --tags --prune
 	info = "!source ~/.githelpers && pretty_git_log"
 	l = !git info -100
 	lp = log --decorate --oneline --graph -p
