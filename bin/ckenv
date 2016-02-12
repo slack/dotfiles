@@ -4,6 +4,8 @@ echo -e "\nDeis =========================="
 echo -e "DEIS_REGISTRY=${DEIS_REGISTRY}"
 echo -e "IMAGE_PREFIX=${IMAGE_PREFIX}"
 echo -e "DEIS_PROFILE=${DEIS_PROFILE}"
+echo "DEIS_ROUTER_SERVICE_HOST=${DEIS_ROUTER_SERVICE_HOST}"
+echo "DEIS_ROUTER_SERVICE_PORT=${DEIS_ROUTER_SERVICE_PORT}"
 
 echo -e "\nDocker ========================"
 echo -e "DOCKER_CERT_PATH=${DOCKER_CERT_PATH}"
