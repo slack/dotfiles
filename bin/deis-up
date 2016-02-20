@@ -1,0 +1,14 @@
+#!/bin/bash
+
+for project in \
+	builder charts deis dockerbuilder etcd fluentd logger minio \
+	monitor postgres registry router slugbuilder slugrunner \
+	workflow workflow-e2e workflow-manager; do
+	if [[ -d "$project" ]]; then
+		pushd $project
+		git fa && git pull && git sync
+		popd
+	else
+		git clone git@github.com:deis/$project.git $project
+	fi
+done
