@@ -14,7 +14,7 @@ echo -e "DOCKER_MACHINE_NAME=${DOCKER_MACHINE_NAME}"
 echo -e "DOCKER_TLS_VERIFY=${DOCKER_TLS_VERIFY}"
 
 echo -e "\nKubernetes ===================="
-echo -e "KUBECONFIG=${KUBE_CONFIG}"
+echo -e "KUBECONFIG=${KUBECONFIG}"
 
 echo -e "\nGo ============================"
 echo -e "GOPATH=${GOPATH}"
