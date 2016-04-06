@@ -39,3 +39,4 @@
 	browser = open
 [user]
 	name = Jason Hansen
+	signingkey = A45DF0A8
