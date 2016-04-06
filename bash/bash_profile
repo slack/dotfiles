@@ -11,8 +11,28 @@ fi
 # default ruby plz
 chruby ruby-2.2
 
-# The next line updates PATH for the Google Cloud SDK.
-if [[ -e "$HOME/google/google-cloud-sdk" ]]; then
-    source "${HOME}/google/google-cloud-sdk/path.bash.inc"
-    source "${HOME}/google/google-cloud-sdk/completion.bash.inc"
+source "${HOME}/google/google-cloud-sdk/path.bash.inc"
+source "${HOME}/google/google-cloud-sdk/completion.bash.inc"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+if [[ -d "$HOME/Developer" ]] ; then
+    PATH="$HOME/Developer/sbin:$HOME/Developer/bin:$PATH"
+fi
+
+if [[ -d "$HOME/Developer/lib/node_modules" ]] ; then
+  NODE_PATH="$HOME/Developer/lib/node_modules"
+fi
+
+## PATH
+PATH=/usr/local/bin:$PATH
+
+if [[ -d "$HOME/.files/bin" ]] ; then
+    PATH="$HOME/.files/bin:$PATH"
+fi
+
+## set PATH so it includes user's private bin if it exists
+if [[ -d "$HOME/bin" ]] ; then
+    PATH="$HOME/bin:$PATH"
 fi

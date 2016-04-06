@@ -6,28 +6,11 @@ if [[ -d "/usr/local/share/chruby" ]] ; then
   source /usr/local/share/chruby/auto.sh
 fi
 
-## set PATH so it includes user's private bin if it exists
-if [[ -d "$HOME/bin" ]] ; then
-    PATH="$HOME/bin:$PATH"
-fi
-
 export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.7.1.0/libexec"
 export AWS_ELASTICACHE_HOME="/usr/local/Cellar/aws-elasticache/1.9.000/libexec"
 export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.14.001/libexec"
 export AWS_CREDENTIAL_FILE="/Volumes/AWSAccounts/credentials/me-rds"
 complete -C aws_completer aws
-
-if [[ -d "$HOME/.files/bin" ]] ; then
-    PATH="$HOME/.files/bin:$PATH"
-fi
-
-if [[ -d "$HOME/Developer" ]] ; then
-    PATH="$HOME/Developer/sbin:$HOME/Developer/bin:$PATH"
-fi
-
-if [[ -d "$HOME/Developer/lib/node_modules" ]] ; then
-  NODE_PATH="$HOME/Developer/lib/node_modules"
-fi
 
 ## source bash completions
 if [[ -d "$HOME/Developer/etc/bash_completion.d" ]] ; then
@@ -52,9 +35,6 @@ fi
 
 ## Editor
 export EDITOR=vim
-
-## PATH
-PATH=/usr/local/bin:$PATH
 
 ## Set ls options per platform
 if [[ $OSTYPE == 'linux-gnu' ]]; then
@@ -98,5 +78,3 @@ if [[ -d "$HOME/.env.d" ]] ; then
   done
 fi
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
