@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo -e "\nDeis =========================="
+echo -e "DEV_REGISTRY=${DEV_REGISTRY}"
 echo -e "DEIS_REGISTRY=${DEIS_REGISTRY}"
 echo -e "IMAGE_PREFIX=${IMAGE_PREFIX}"
 echo -e "DEIS_PROFILE=${DEIS_PROFILE}"
