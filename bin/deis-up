@@ -1,9 +1,10 @@
 #!/bin/bash
 
 for project in \
-	builder charts deis dockerbuilder etcd fluentd logger minio \
+	builder charts controller deis dockerbuilder etcd fluentd logger minio \
 	monitor postgres registry router slugbuilder slugrunner \
-	workflow workflow-e2e workflow-manager; do
+	workflow workflow-e2e workflow-manager workflow-manager-api; do
+	cd /Users/jhansen/p/go/src/github.com/deis
 	if [[ -d "$project" ]]; then
 		pushd $project
 		git fa && git pull && git sync
