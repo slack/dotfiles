@@ -9,7 +9,7 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # default ruby plz
-chruby ruby-2.2
+chruby ruby-2.3
 
 source "${HOME}/google/google-cloud-sdk/path.bash.inc"
 source "${HOME}/google/google-cloud-sdk/completion.bash.inc"
