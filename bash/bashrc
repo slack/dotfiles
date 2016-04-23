@@ -57,6 +57,9 @@ function kube_target {
   fi
 }
 
+function gogo() { cd $GOPATH/src/$@; }
+function gogh() { cd $GOPATH/src/github.com/$@; }
+
 ## Prompt
 if [[ -n "${SSH_CONNECTION+x}" ]]; then
   export PS1="\$(kube_target)\H:\W \$(parse_git_branch)\$ "
@@ -77,4 +80,3 @@ if [[ -d "$HOME/.env.d" ]] ; then
     source $f
   done
 fi
-

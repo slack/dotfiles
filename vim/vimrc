@@ -96,8 +96,10 @@ map <leader>ff :CtrlP<CR>
 map <leader>cf :ClearCtrlPCache<CR>
 map <leader>ct :CtrlPTag<CR>
 
-map <leader>gg :topleft 100 :split Gemfile<CR>
 map <leader>o :cd ~/p/
+map <leader>gg :topleft 100 :split Gemfile<CR>
+map <leader>go :cd ~/p/go/src/
+map <leader>gh :cd ~/p/go/src/github.com/
 
 " Align bindings
 " Note: :AlignMapsClean removes default maps
