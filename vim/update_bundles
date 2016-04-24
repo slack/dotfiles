@@ -3,9 +3,10 @@
 require 'fileutils'
 
 git_bundles = [
+  "https://github.com/kchmck/vim-coffee-script.git",
   "git://github.com/altercation/vim-colors-solarized.git",
   "git://github.com/avakhov/vim-yaml.git",
-  "git@github.com:dhruvasagar/vim-table-mode.git",
+  "git://github.com/dhruvasagar/vim-table-mode.git",
   "git://github.com/elixir-lang/vim-elixir.git",
   "git://github.com/fatih/vim-go.git",
   "git://github.com/jlanzarotta/bufexplorer.git",
