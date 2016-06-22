@@ -80,3 +80,5 @@ if [[ -d "$HOME/.env.d" ]] ; then
     source $f
   done
 fi
+
+[[ -s "/home/jhansen/.gvm/scripts/gvm" ]] && source "/home/jhansen/.gvm/scripts/gvm"
