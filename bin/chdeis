@@ -1,0 +1,23 @@
+#!/bin/bash
+
+DEIS=~/.deis
+
+case "$1" in
+        clear)
+                echo "unset DEIS_PROFILE"
+                ;;
+        info)
+                echo "DEIS_PROFILE=${DEIS_PROFILE}"
+                ;;
+        list)
+                ls ${DEIS}/*.json
+                ;;
+        *)
+                if [[ -e ${DEIS}/${1}.json ]]; then
+                        echo "export DEIS_PROFILE=${1}"
+                else
+                        echo "Usage: ${0} {list|clear|name}"
+
+                        exit 1
+                fi
+esac

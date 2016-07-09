@@ -57,14 +57,20 @@ function kube_target {
   fi
 }
 
+function deis_profile {
+  if [[ ! -z ${DEIS_PROFILE} ]]; then
+    echo -n "w:${DEIS_PROFILE} "
+  fi
+}
+
 function gogo() { cd $GOPATH/src/$@; }
 function gogh() { cd $GOPATH/src/github.com/$@; }
 
 ## Prompt
 if [[ -n "${SSH_CONNECTION+x}" ]]; then
-  export PS1="\$(kube_target)\H:\W \$(parse_git_branch)\$ "
+  export PS1="\$(deis_profile)\$(kube_target)\H:\W \$(parse_git_branch)\$ "
 else
-  export PS1="\$(kube_target)\W \$(parse_git_branch)\$ "
+  export PS1="\$(deis_profile)\$(kube_target)\W \$(parse_git_branch)\$ "
 fi
 
 export RUBY_FREE_MIN=200000
