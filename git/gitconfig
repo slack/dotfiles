@@ -23,6 +23,8 @@
 	pl = pull --rebase
 	s = status
 	st = status
+[commit]
+	gpgsign = true
 [core]
 	editor = /usr/bin/vim
 	excludesfile = ~/.gitignore
