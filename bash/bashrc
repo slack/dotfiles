@@ -33,6 +33,11 @@ if [[ -d "$HOME/p/go" ]]; then
   export GO15VENDOREXPERIMENT=1
 fi
 
+if [[ -d "$HOME/go" ]]; then
+  export GOPATH="$HOME/go"
+  export PATH=$GOPATH/bin:$PATH
+fi
+
 ## Editor
 export EDITOR=vim
 
