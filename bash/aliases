@@ -27,3 +27,6 @@ alias wtf='echo "❨╯°□°❩╯︵┻━┻"'
 alias idk='echo "¯\_(ツ)_/¯"'
 
 alias reado="ssh-reagent $*"
+
+alias service='kubectl config use-context $(cat ~/.pilot/service-context)'
+alias agent='kubectl config use-context $(cat ~/.pilot/agent-context)'
