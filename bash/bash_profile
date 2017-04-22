@@ -11,8 +11,10 @@ fi
 # default ruby plz
 chruby ruby-2.3
 
-source "${HOME}/google/google-cloud-sdk/path.bash.inc"
-source "${HOME}/google/google-cloud-sdk/completion.bash.inc"
+if [[ -d "${HOME}/google/google-cloud-sdk" ]]; then
+  source "${HOME}/google/google-cloud-sdk/path.bash.inc"
+  source "${HOME}/google/google-cloud-sdk/completion.bash.inc"
+fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
