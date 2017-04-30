@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+KUBES=~/.kubes
+
+if [ -z "$1" ]
+then
+        echo "Usage: `basename $0` <new-kube>"
+        exit $E_BADARGS
+fi
+
+new_kube=$1
+
+mkdir -p ${KUBES}/${new_kube}
+
+cat > ${KUBES}/${new_kube}/env <<KUBE_ENV_FILE
+export KUBE_TARGET=${new_kube}
+export KUBECONFIG=${KUBES}/${new_kube}/kubeconfig
+KUBE_ENV_FILE
+
+chkube ${new_kube}
