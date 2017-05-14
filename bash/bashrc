@@ -72,19 +72,23 @@ fi
 
 ## Prompt
 function env_targets {
-if [[ (! -z ${KUBE_TARGET}) || (! -z ${DEIS_PROFILE}) ]]; then
-  echo -n "[$(kube_target)|$(workflow_target)] "
+if [[ ( -n ${KUBE_TARGET}) || ( -n ${DEIS_PROFILE}) ]]; then
+  echo -n "[$(kube_target)$(workflow_target)] "
 fi
 }
 
 function kube_target {
-  if [[ ! -z ${KUBE_TARGET} ]]; then
-    echo -n "k→${KUBE_TARGET}"
+  if [[ -n ${KUBE_TARGET} ]]; then
+    sep=""
+    if [[ -n ${DEIS_PROFILE} ]]; then
+      sep="|"
+    fi
+    echo -n "⎈ →${KUBE_TARGET}${sep}"
   fi
 }
 
 function workflow_target {
-  if [[ ! -z ${DEIS_PROFILE} ]]; then
+  if [[ -n ${DEIS_PROFILE} ]]; then
     echo -n "w→${DEIS_PROFILE}"
   fi
 }
