@@ -1,7 +1,9 @@
 DOTFILES := $(shell pwd)
 all: shell tmux screen perl _ruby X mail vimfiles _git
 shell:
+	ln -fs $(DOTFILES)/bash/git-prompt-colors.sh ${HOME}/.git-prompt-colors.sh
 	ln -fs $(DOTFILES)/bash/bashrc ${HOME}/.bashrc
+	ln -fs $(DOTFILES)/bash/completion ${HOME}/.bash_completion
 	ln -fs $(DOTFILES)/bash/bashenv ${HOME}/.bashenv
 	ln -fs $(DOTFILES)/bash/bashrc ${HOME}/.bashrc
 	ln -fs $(DOTFILES)/bash/bash_profile ${HOME}/.profile

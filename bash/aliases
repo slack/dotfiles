@@ -1,8 +1,4 @@
 ## Aliases
-alias lft='lft -TeA'
-alias nerd='vim +NERDTree'
-alias sr='screen -r'
-alias g='git'
 alias v='vagrant'
 alias vms='VBoxManage list runningvms'
 
@@ -14,19 +10,13 @@ alias r='rails'
 
 ## git
 alias g='git'
+complete -F _complete_alias g
 
 alias metame='CLOUD_URL=https://cloud-meta.engineyard.com ey'
 alias m='CLOUD_URL=https://cloud-meta.engineyard.com ey ssh -e'
 alias tfl='tail -n 30 -qF log/*.events.log log/*.actionview.log log/{test,development}.log log/*.controller.log | egrep -v "(Datamapper bug|Cache read)"'
 
-alias pr='hub pull-request -b engineyard:master -h engineyard:$(git symbolic-ref --short -q HEAD)'
-
-alias a='azure'
-
 alias wtf='echo "❨╯°□°❩╯︵┻━┻"'
 alias idk='echo "¯\_(ツ)_/¯"'
 
 alias reado="ssh-reagent $*"
-
-alias service='kubectl config use-context $(cat ~/.pilot/service-context)'
-alias agent='kubectl config use-context $(cat ~/.pilot/agent-context)'

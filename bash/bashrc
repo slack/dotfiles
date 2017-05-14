@@ -1,20 +1,33 @@
 ## .bashrc for non-login shells
 
-## Chruby
+PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+
+# Aliases
+if [[ -s "$HOME/.aliases" ]]; then
+  source "$HOME/.aliases"
+fi
+
+## Completions
+if [[ -f /usr/local/etc/bash_completion ]]; then
+  . /usr/local/etc/bash_completion
+  if [[ -d "/usr/local/etc/bash_completion.d" ]] ; then
+    for f in /usr/local/etc/bash_completion.d/*; do
+      if [[ -f $f ]]; then
+        source $f
+      fi
+    done
+  fi
+fi
+
+## Ruby
 if [[ -d "/usr/local/share/chruby" ]] ; then
   source /usr/local/share/chruby/chruby.sh
   source /usr/local/share/chruby/auto.sh
 fi
 
-
-## source bash completions
-if [[ -d "$HOME/Developer/etc/bash_completion.d" ]] ; then
-    source $HOME/Developer/etc/bash_completion.d/*.bash
-fi
-
-if [[ -d "/usr/local/etc/bash_completion.d" ]] ; then
-    source /usr/local/etc/bash_completion.d/*.bash
-fi
+export RUBY_FREE_MIN=200000
+export RUBY_GC_HEAP_FREE_SLOTS=200000
+export RUBY_GC_MALLOC_LIMIT=60000000
 
 # Java
 if [[ -e "/usr/libexec/java_home" ]] ; then
@@ -23,6 +36,8 @@ if [[ -e "/usr/libexec/java_home" ]] ; then
 fi
 
 # Go
+[[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm"
+
 if [[ -d "$HOME/p/go" ]]; then
   export GOPATH="$HOME/p/go"
   export PATH=$GOPATH/bin:$PATH
@@ -37,7 +52,6 @@ fi
 ## Editor
 export EDITOR=vim
 
-## Set ls options per platform
 if [[ $OSTYPE == 'linux-gnu' ]]; then
   alias ls='ls -p --color=auto'
 elif [[ $OSTYPE =~ darwin* ]]; then
@@ -50,21 +64,11 @@ function gogh() { cd $GOPATH/src/github.com/$@; }
 function gd() { cd $GOPATH/src/github.com/deis/$@; }
 function gp() { cd $GOPATH/src/github.com/deis/pilot-$@; }
 
-export RUBY_FREE_MIN=200000
-export RUBY_GC_HEAP_FREE_SLOTS=200000
-export RUBY_GC_MALLOC_LIMIT=60000000
-
-if [[ -s "$HOME/.aliases" ]]; then
-  source "$HOME/.aliases"
-fi
-
 if [[ -d "$HOME/.env.d" ]] ; then
   for f in $HOME/.env.d/*.bash; do
     source $f
   done
 fi
-
-[[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm"
 
 ## Prompt
 function env_targets {
