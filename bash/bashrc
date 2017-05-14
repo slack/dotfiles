@@ -45,36 +45,10 @@ elif [[ $OSTYPE =~ darwin* ]]; then
 fi
 
 ## Functions
-function parse_git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo "*"
-}
-function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
-}
-
-function kube_target {
-  if [[ ! -z ${KUBE_TARGET} ]]; then
-    echo -n "k:${KUBE_TARGET} "
-  fi
-}
-
-function deis_profile {
-  if [[ ! -z ${DEIS_PROFILE} ]]; then
-    echo -n "w:${DEIS_PROFILE} "
-  fi
-}
-
 function gogo() { cd $GOPATH/src/$@; }
 function gogh() { cd $GOPATH/src/github.com/$@; }
 function gd() { cd $GOPATH/src/github.com/deis/$@; }
 function gp() { cd $GOPATH/src/github.com/deis/pilot-$@; }
-
-## Prompt
-if [[ -n "${SSH_CONNECTION+x}" ]]; then
-  export PS1="\$(deis_profile)\$(kube_target)\H:\W \$(parse_git_branch)\$ "
-else
-  export PS1="\$(deis_profile)\$(kube_target)\W \$(parse_git_branch)\$ "
-fi
 
 export RUBY_FREE_MIN=200000
 export RUBY_GC_HEAP_FREE_SLOTS=200000
@@ -90,16 +64,35 @@ if [[ -d "$HOME/.env.d" ]] ; then
   done
 fi
 
-function hadrian() {
-	if [[ "${1}" == "-meta" ]] || [[ "${1}" == "--meta" ]];then
-		suffix="-meta"
-		id="${2}"
-	else
-		suffix="${2}"
-		id="${1}"
-	fi
+[[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm"
 
-	HADRIAN_AMAZON_ID="${id}" ssh -C -o StrictHostKeyChecking=no -o SendEnv=HADRIAN_AMAZON_ID  "hadrian@hadrian${suffix}.engineyard.com"
+## Prompt
+function env_targets {
+if [[ (! -z ${KUBE_TARGET}) || (! -z ${DEIS_PROFILE}) ]]; then
+  echo -n "[$(kube_target)|$(workflow_target)] "
+fi
 }
 
-[[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm"
+function kube_target {
+  if [[ ! -z ${KUBE_TARGET} ]]; then
+    echo -n "k→${KUBE_TARGET}"
+  fi
+}
+
+function workflow_target {
+  if [[ ! -z ${DEIS_PROFILE} ]]; then
+    echo -n "w→${DEIS_PROFILE}"
+  fi
+}
+
+if [[ -n "${SSH_CONNECTION+x}" ]]; then
+  export PS1="\$(env_targets)\H:\W \$(parse_git_branch)\$ "
+else
+  export PS1="\$(env_targets)\W \$(parse_git_branch)\$ "
+fi
+
+if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+  GIT_PROMPT_THEME_NAME="Custom"
+  __GIT_PROMPT_DIR="/usr/local/opt/bash-git-prompt/share"
+  source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
+fi
