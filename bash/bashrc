@@ -6,11 +6,6 @@ if [[ -d "/usr/local/share/chruby" ]] ; then
   source /usr/local/share/chruby/auto.sh
 fi
 
-export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.7.1.0/libexec"
-export AWS_ELASTICACHE_HOME="/usr/local/Cellar/aws-elasticache/1.9.000/libexec"
-export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.14.001/libexec"
-export AWS_CREDENTIAL_FILE="/Volumes/AWSAccounts/credentials/me-rds"
-complete -C aws_completer aws
 
 ## source bash completions
 if [[ -d "$HOME/Developer/etc/bash_completion.d" ]] ; then
