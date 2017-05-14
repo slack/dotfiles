@@ -22,6 +22,7 @@ if [[ -e "/usr/libexec/java_home" ]] ; then
   export PATH=$JAVA_HOME:$PATH
 fi
 
+# Go
 if [[ -d "$HOME/p/go" ]]; then
   export GOPATH="$HOME/p/go"
   export PATH=$GOPATH/bin:$PATH
@@ -101,4 +102,4 @@ function hadrian() {
 	HADRIAN_AMAZON_ID="${id}" ssh -C -o StrictHostKeyChecking=no -o SendEnv=HADRIAN_AMAZON_ID  "hadrian@hadrian${suffix}.engineyard.com"
 }
 
-[[ -s "/home/jhansen/.gvm/scripts/gvm" ]] && source "/home/jhansen/.gvm/scripts/gvm"
+[[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm"
