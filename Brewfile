@@ -44,6 +44,7 @@ cask "omnigraffle"
 cask "docker"
 cask "skype-for-business"
 cask "sketch"
+cask "zoomus"
 
 mas "Microsoft Remote Desktop (8.0.27287)", id: 715768417
 mas "Marked (1.4.3)", id: 448925439
