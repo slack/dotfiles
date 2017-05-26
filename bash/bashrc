@@ -64,6 +64,20 @@ function gogh() { cd $GOPATH/src/github.com/$@; }
 function gd() { cd $GOPATH/src/github.com/deis/$@; }
 function gp() { cd $GOPATH/src/github.com/deis/pilot-$@; }
 
+function git-work() {
+  git config user.name "Jason Hansen"
+  git config user.email "Jason.Hansen@microsoft.com"
+  git config user.signingkey 80245F0F85EBC14E08457BAE5671CD6252A61A10
+  git config commit.gpgsign true
+}
+
+function git-personal() {
+  git config user.name "Jason Hansen"
+  git config user.email "jason@slack.io"
+  git config user.signingkey EE55CC408FBBAC76EAD0B3DD13DE565EA45DF0A8
+  git config commit.gpgsign true
+}
+
 if [[ -d "$HOME/.env.d" ]] ; then
   for f in $HOME/.env.d/*.bash; do
     source $f
