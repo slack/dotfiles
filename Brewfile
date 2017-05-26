@@ -41,6 +41,9 @@ cask "alfred"
 cask "bartender"
 cask "macvim"
 cask "omnigraffle"
+cask "docker"
+cask "skype-for-business"
+cask "sketch"
 
 mas "Microsoft Remote Desktop (8.0.27287)", id: 715768417
 mas "Marked (1.4.3)", id: 448925439
@@ -52,3 +55,8 @@ mas "OneDrive (17.3.6798)", id: 823766827
 mas "WiFi Explorer (2.3.1)", id: 494803304
 mas "Divvy (1.5.1)", id: 413857545
 mas "Slack (2.6.0)", id: 803453959
+mas "Annotate", id: 918207447
+mas "Marked 2", id: 890031187
+mas "Tweetbot", id: 557168941
+mas "WiFi Explorer", id: 494803304
+mas "WiFi Signal", id: 525912054
