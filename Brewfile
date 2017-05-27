@@ -45,6 +45,7 @@ cask "docker"
 cask "skype-for-business"
 cask "sketch"
 cask "zoomus"
+cask "minikube"
 
 mas "Microsoft Remote Desktop (8.0.27287)", id: 715768417
 mas "Marked (1.4.3)", id: 448925439
@@ -61,3 +62,4 @@ mas "Marked 2", id: 890031187
 mas "Tweetbot", id: 557168941
 mas "WiFi Explorer", id: 494803304
 mas "WiFi Signal", id: 525912054
+mas "CloudApp", id: 417602904
