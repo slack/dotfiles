@@ -15,6 +15,7 @@ mkdir -p ${KUBES}/${new_kube}
 cat > ${KUBES}/${new_kube}/env <<KUBE_ENV_FILE
 export KUBE_TARGET=${new_kube}
 export KUBECONFIG=${KUBES}/${new_kube}/kubeconfig
+export KUBE_FILES=${KUBES}/${new_kube}
 KUBE_ENV_FILE
 
 chkube ${new_kube}

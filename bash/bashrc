@@ -8,14 +8,17 @@ if [[ -s "$HOME/.aliases" ]]; then
 fi
 
 ## Completions
-if [[ -f /usr/local/etc/bash_completion ]]; then
-  . /usr/local/etc/bash_completion
+if [[ -f /usr/local/share/bash-completion/bash_completion ]]; then
+  . /usr/local/share/bash-completion/bash_completion
   if [[ -d "/usr/local/etc/bash_completion.d" ]] ; then
     for f in /usr/local/etc/bash_completion.d/*; do
       if [[ -f $f ]]; then
         source $f
       fi
     done
+  fi
+  if [[ -f ~/.bash_completion ]]; then
+    . ~/.bash_completion
   fi
 fi
 

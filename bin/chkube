@@ -6,6 +6,7 @@ case "$1" in
         clear)
                 echo "unset KUBECONFIG"
                 echo "unset KUBE_TARGET"
+                echo "unset KUBE_FILES"
                 ;;
         info)
                 echo "KUBECONFIG=${KUBECONFIG}"
