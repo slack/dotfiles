@@ -4,6 +4,7 @@ PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # Aliases
 if [[ -s "$HOME/.aliases" ]]; then
+  # shellcheck source=/dev/null
   source "$HOME/.aliases"
 fi
 
@@ -13,6 +14,7 @@ if [[ -f /usr/local/share/bash-completion/bash_completion ]]; then
   if [[ -d "/usr/local/etc/bash_completion.d" ]] ; then
     for f in /usr/local/etc/bash_completion.d/*; do
       if [[ -f $f ]]; then
+        # shellcheck source=/dev/null
         source $f
       fi
     done
@@ -52,6 +54,10 @@ if [[ -d "$HOME/go" ]]; then
   export PATH=$GOPATH/bin:$PATH
 fi
 
+if [[ -d "$HOME/.krew/bin" ]]; then
+  export PATH=${HOME}/.krew/bin:$PATH
+fi
+
 ## Editor
 export EDITOR=vim
 
@@ -62,10 +68,8 @@ elif [[ $OSTYPE =~ darwin* ]]; then
 fi
 
 ## Functions
-function gogo() { cd $GOPATH/src/$@; }
-function gogh() { cd $GOPATH/src/github.com/$@; }
-function gd() { cd $GOPATH/src/github.com/deis/$@; }
-function gp() { cd $GOPATH/src/github.com/deis/pilot-$@; }
+function gogo() { cd "$GOPATH/src/$*" || return; }
+function gogh() { cd "$GOPATH/src/github.com/$*" || return; }
 
 function git-work() {
   git config user.name "Jason Hansen"
@@ -83,14 +87,15 @@ function git-personal() {
 
 if [[ -d "$HOME/.env.d" ]] ; then
   for f in $HOME/.env.d/*.bash; do
-    source $f
+    # shellcheck source=/dev/null
+    source "$f"
   done
 fi
 
 ## Prompt
 function env_targets {
 if [[ ( -n ${KUBE_TARGET}) || ( -n ${DEIS_PROFILE}) ]]; then
-  echo -n "[$(kube_target)$(workflow_target)] "
+  echo -n "[$(kube_target)] "
 fi
 }
 

@@ -43,3 +43,9 @@
 	name = Jason Hansen
 [credential]
 	helper = cache
+[rerere]
+	enabled = true
+[github]
+	user = slack
+[ghi]
+	token = !security find-internet-password -a slack -s github.com -l 'ghi token' -w

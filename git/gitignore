@@ -1,3 +1,5 @@
 .DS_Store
 .*.sw?
 .bundle
+_output
+_dump

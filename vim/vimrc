@@ -46,6 +46,8 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 " turn syntax highlighting on
 syntax on
 
+let g:syntastic_yaml_checkers = ['yamllint']
+
 " 256 colors, colorscheme
 set t_Co=256
 colorscheme solarized

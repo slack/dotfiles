@@ -20,3 +20,7 @@ alias wtf='echo "❨╯°□°❩╯︵┻━┻"'
 alias idk='echo "¯\_(ツ)_/¯"'
 
 alias reado="ssh-reagent $*"
+
+alias gohcp="gogo msazure.visualstudio.com/DefaultCollection/One/_git/Compute-ContainerService"
+alias gorp="gogo goms.io/acsrp"
+alias hcp-deploy="\$KUBE_FILES/hcp-deploy"
